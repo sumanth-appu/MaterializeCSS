@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--This is the CDN for JQuery and Angular1.8-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!--This is the  link for the Materilize content -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- This is the link for the material icons-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body ng-app="myApp">
+    <div class="container" id="home">
+      <h1 class="center-align"><i class="material-icons medium center deep-purple-text ">bubble_chart</i>Bubbly</h1>
+    </div>
+
+    <section class="vertical-height">
+      
+      <div class="container">
+        <div class="row valign-wrapper">
+          <div class="col s6">
+            <h3 class="collection-jeading left-align">
+              Welcome!! Lets learn MaterializeCSS
+            </h3>
+            <p class="left">
+              This is a project in order to learn the concept or the the
+              insights of the materialCSS. At this point I know Basics of HTML,
+              CSS, JavaScript, and Some concept of ReactJS.
+              <br />
+              <br />
+              <a class="waves-effect waves-light btn deep-purple accent-3"><i class="material-icons left">home</i>hmoe</a>
+            </p>
+          </div>
+          <div class="col s6">
+            <div class="collage p2 m3">
+              <div class="row">
+                <div class="col s6 one">
+                  <img src="./Resource/About me.png" class="image1 img" />
+                  <img src="./Resource/personal note.png" class="image2 img" />
+                </div>
+                <div class="col s6 right two">
+                  <img src="./Resource/savings.png" class="image3 img" />
+                  <img src="./Resource/social bio.png" class="image4 img" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="service" class="vertical-height">
+      <div class="container">
+        <h2 class="left-align">Some of My Services</h1>
+          <div class="row">
+            <div class="col s12 m6 l4">
+              <div class="card deep-purple darken-1">
+                <div class="card-content white-text">
+                  <span class="card-title">Web  Development <i  class="material-icons medium right ">code</i><br></span>
+                  <p>I am a very simple card. I am good at containing small bits of information.
+                  I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">This is a link</a> 
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m6 l4">
+              <div class="card deep-purple lighten-1">
+                <div class="card-content white-text">
+                  <span class="card-title">Web Design <i class="material-icons medium right">design_services</i></span>
+                  <p>I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">This is a link</a> 
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m6 l4">
+              <div class="card deep-purple darken-1">
+                <div class="card-content white-text">
+                  <span class="card-title">Logo Design <i class="material-icons medium right">all_inclusive</i></span>
+                  <p>I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">This is a link</a> 
+                </div>
+              </div>
+            </div>
+          </div>
+                    
+      </div>
+    </section>
+    <section id="contact" class="vertical-height">
+      <div class="container">
+        <h2>Let! Get Connected....</h2>
+        <div class="container">
+          <div class="row">
+            <form class="col s12" id="contactForm" action="http://localhost/send_mail.php" method="POST">
+              <div class="row">
+                <div class="input-field col s6">
+                  <i class="material-icons prefix">account_circle</i>
+                  <input id="icon_prefix" type="text" class="validate" name="firstName">
+                  <label for="icon_prefix">First Name</label>
+                </div>
+                <div class="input-field col s6">
+                  <i class="material-icons prefix">phone</i>
+                  <input id="icon_telephone" type="tel" class="validate" name="telephone">
+                  <label for="icon_telephone">Telephone</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">email</i>
+                  <input id="email" type="email" class="validate" name="email">
+                  <label for="email">Email</label>
+                  <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col s12">
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <i class="material-icons prefix">textsms</i>
+                      <input type="text" id="autocomplete-input" class="autocomplete" name="intro">
+                      <label for="autocomplete-input">Short Intro</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div ng-controller="MinCtrl">
+              <button class="waves-effect waves-light btn deep-purple accent-3 right" id="submitBtn" ng-click="showAlert()" type="submit"><i class="material-icons left">home</i>Submit</button>
+            </div>
+            </form>
+          </div>
+          </div>
+        </div>
+    </section>
+    <div class="fixed-action-btn">
+      <a class="btn-floating btn-large deep-purple accent-4">
+        <i class="large material-icons">mode_edit</i>
+      </a>
+      <ul>
+        <li><a class="btn-floating deep-purple " href="#home"><i class="material-icons">home</i></a></li>
+        <li><a class="btn-floating deep-purple darken-1" href="#service"><i class="material-icons">format_quote</i></a></li>
+        <li><a class="btn-floating deep-purple darken-3" href="#contact"><i class="material-icons">publish</i></a></li>
+        
+      </ul>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
